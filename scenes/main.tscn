@@ -1,0 +1,117 @@
+[gd_scene load_steps=19 format=3 uid="uid://35mpa86odeah"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_kp16y"]
+[ext_resource type="PackedScene" uid="uid://bxlpohkjv8j3" path="res://scenes/button_pad.tscn" id="2_c7r6p"]
+[ext_resource type="AudioStream" uid="uid://os5imei4ibnk" path="res://samples/Rock-Snare-ff-3.wav" id="3_5k4w7"]
+[ext_resource type="AudioStream" uid="uid://rigisendfeuw" path="res://samples/Rock-Kit-Kick-ff-2.wav" id="4_jqy2b"]
+[ext_resource type="AudioStream" uid="uid://bd7yejdt6oa1e" path="res://samples/Rock-Kit-Crash-1-1.wav" id="5_221ku"]
+[ext_resource type="AudioStream" uid="uid://cmx5ruhn1qq7k" path="res://samples/Rock-Snare-ff-2.wav" id="6_2w42r"]
+[ext_resource type="AudioStream" uid="uid://kqk082xul8qu" path="res://samples/riepayaso_sample_01.wav" id="6_tplvy"]
+[ext_resource type="AudioStream" uid="uid://dafmvo2kpe4mo" path="res://samples/Rock-Kit-HiHat-Tip-1.wav" id="7_6427o"]
+[ext_resource type="AudioStream" uid="uid://ctmqvx6p7a42i" path="res://samples/Rock-Rack-1.wav" id="8_cfley"]
+[ext_resource type="AudioStream" uid="uid://dvo7vrabrykx0" path="res://samples/Rock-Rack-2.wav" id="9_7athj"]
+[ext_resource type="AudioStream" uid="uid://clubml0ktaeku" path="res://samples/Rock-Kit-Floor-1.wav" id="10_27ydc"]
+[ext_resource type="AudioStream" uid="uid://ddkr0s2rntc2j" path="res://samples/Rock-Kit-HiHat-Open.wav" id="11_rcy7o"]
+[ext_resource type="AudioStream" uid="uid://bi3q3hb8s33rj" path="res://samples/Rock-Kit-HiHat-Shank-1.wav" id="12_exbt4"]
+[ext_resource type="AudioStream" uid="uid://dq1xka8egjij6" path="res://samples/Rock-Kit-Kick-pp-1.wav" id="13_a8ydo"]
+[ext_resource type="AudioStream" uid="uid://b0cn1v3g0nnob" path="res://samples/Rock-Ride-Bell.wav" id="14_y0t0x"]
+[ext_resource type="AudioStream" uid="uid://ckii5ym8h4r7t" path="res://samples/Rock-Ride-Shank.wav" id="15_e5rcy"]
+[ext_resource type="Texture2D" uid="uid://bnanh4h65ypd4" path="res://logos/PTP Logo.png" id="16_wejv6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_q1828"]
+font_size = 40
+
+[node name="main" type="CanvasLayer"]
+script = ExtResource("1_kp16y")
+
+[node name="BG" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ButtonPad" parent="." instance=ExtResource("2_c7r6p")]
+position = Vector2(19, 208)
+
+[node name="SoundSamples" type="Node" parent="."]
+
+[node name="Sound01" type="AudioStreamPlayer" parent="SoundSamples"]
+stream = ExtResource("3_5k4w7")
+max_polyphony = 3
+
+[node name="Sound02" type="AudioStreamPlayer" parent="SoundSamples"]
+stream = ExtResource("4_jqy2b")
+max_polyphony = 3
+
+[node name="Sound03" type="AudioStreamPlayer" parent="SoundSamples"]
+stream = ExtResource("5_221ku")
+volume_db = -19.861
+max_polyphony = 3
+
+[node name="Sound04" type="AudioStreamPlayer" parent="SoundSamples"]
+stream = ExtResource("6_tplvy")
+max_polyphony = 3
+
+[node name="Sound05" type="AudioStreamPlayer" parent="SoundSamples"]
+stream = ExtResource("7_6427o")
+max_polyphony = 3
+
+[node name="Sound06" type="AudioStreamPlayer" parent="SoundSamples"]
+stream = ExtResource("6_2w42r")
+max_polyphony = 3
+
+[node name="Sound07" type="AudioStreamPlayer" parent="SoundSamples"]
+stream = ExtResource("8_cfley")
+max_polyphony = 3
+
+[node name="Sound08" type="AudioStreamPlayer" parent="SoundSamples"]
+stream = ExtResource("9_7athj")
+max_polyphony = 3
+
+[node name="Sound09" type="AudioStreamPlayer" parent="SoundSamples"]
+stream = ExtResource("10_27ydc")
+max_polyphony = 3
+
+[node name="Sound10" type="AudioStreamPlayer" parent="SoundSamples"]
+stream = ExtResource("11_rcy7o")
+max_polyphony = 3
+
+[node name="Sound11" type="AudioStreamPlayer" parent="SoundSamples"]
+stream = ExtResource("12_exbt4")
+max_polyphony = 3
+
+[node name="Sound12" type="AudioStreamPlayer" parent="SoundSamples"]
+stream = ExtResource("13_a8ydo")
+max_polyphony = 3
+
+[node name="Sound13" type="AudioStreamPlayer" parent="SoundSamples"]
+stream = ExtResource("14_y0t0x")
+max_polyphony = 3
+
+[node name="Sound14" type="AudioStreamPlayer" parent="SoundSamples"]
+stream = ExtResource("15_e5rcy")
+max_polyphony = 3
+
+[node name="Sound15" type="AudioStreamPlayer" parent="SoundSamples"]
+stream = ExtResource("6_2w42r")
+max_polyphony = 3
+
+[node name="Sound16" type="AudioStreamPlayer" parent="SoundSamples"]
+stream = ExtResource("10_27ydc")
+max_polyphony = 3
+
+[node name="PtpLogo" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(349, 1345)
+scale = Vector2(0.466725, 0.466725)
+texture = ExtResource("16_wejv6")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 296.0
+offset_top = 1144.0
+offset_right = 373.0
+offset_bottom = 1199.0
+label_settings = SubResource("LabelSettings_q1828")

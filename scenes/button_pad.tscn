@@ -1,0 +1,171 @@
+[gd_scene load_steps=8 format=3 uid="uid://bxlpohkjv8j3"]
+
+[ext_resource type="Script" path="res://scripts/button_pad.gd" id="1_pv32v"]
+[ext_resource type="Texture2D" uid="uid://bi3ov0ss3xcdc" path="res://button_textures/Button001.svg" id="2_i8mhe"]
+[ext_resource type="Texture2D" uid="uid://bhgkhustlkjlq" path="res://button_textures/Button001_Pressed.svg" id="3_03uf8"]
+[ext_resource type="Texture2D" uid="uid://c2b67gplcbuvd" path="res://button_textures/Button002.svg" id="4_6eb1y"]
+[ext_resource type="Texture2D" uid="uid://cvbb451hfropn" path="res://button_textures/Button002_Pressed.svg" id="5_s48rp"]
+[ext_resource type="Texture2D" uid="uid://bj3a0moo3fvle" path="res://button_textures/Button003.svg" id="6_p5wjx"]
+[ext_resource type="Texture2D" uid="uid://damkvy26x143g" path="res://button_textures/Button003_Pressed.svg" id="7_qbyy8"]
+
+[node name="ButtonPad" type="Node2D"]
+script = ExtResource("1_pv32v")
+
+[node name="Button01" type="TouchScreenButton" parent="."]
+texture_normal = ExtResource("2_i8mhe")
+texture_pressed = ExtResource("3_03uf8")
+passby_press = true
+metadata/_edit_lock_ = true
+
+[node name="Button02" type="TouchScreenButton" parent="."]
+position = Vector2(220, 0)
+texture_normal = ExtResource("2_i8mhe")
+texture_pressed = ExtResource("3_03uf8")
+passby_press = true
+
+[node name="Button03" type="TouchScreenButton" parent="."]
+position = Vector2(440, 0)
+texture_normal = ExtResource("2_i8mhe")
+texture_pressed = ExtResource("3_03uf8")
+passby_press = true
+metadata/_edit_lock_ = true
+
+[node name="Button04" type="TouchScreenButton" parent="."]
+position = Vector2(660, 0)
+texture_normal = ExtResource("2_i8mhe")
+texture_pressed = ExtResource("3_03uf8")
+passby_press = true
+metadata/_edit_lock_ = true
+
+[node name="Button05" type="TouchScreenButton" parent="."]
+position = Vector2(0, 220)
+texture_normal = ExtResource("2_i8mhe")
+texture_pressed = ExtResource("3_03uf8")
+passby_press = true
+metadata/_edit_lock_ = true
+
+[node name="Button06" type="TouchScreenButton" parent="."]
+position = Vector2(220, 220)
+texture_normal = ExtResource("2_i8mhe")
+texture_pressed = ExtResource("3_03uf8")
+passby_press = true
+metadata/_edit_lock_ = true
+
+[node name="Button07" type="TouchScreenButton" parent="."]
+position = Vector2(440, 220)
+texture_normal = ExtResource("2_i8mhe")
+texture_pressed = ExtResource("3_03uf8")
+passby_press = true
+metadata/_edit_lock_ = true
+
+[node name="Button08" type="TouchScreenButton" parent="."]
+position = Vector2(660, 220)
+texture_normal = ExtResource("2_i8mhe")
+texture_pressed = ExtResource("3_03uf8")
+passby_press = true
+metadata/_edit_lock_ = true
+
+[node name="Button09" type="TouchScreenButton" parent="."]
+position = Vector2(0, 440)
+texture_normal = ExtResource("2_i8mhe")
+texture_pressed = ExtResource("3_03uf8")
+passby_press = true
+metadata/_edit_lock_ = true
+
+[node name="Button10" type="TouchScreenButton" parent="."]
+position = Vector2(220, 440)
+texture_normal = ExtResource("2_i8mhe")
+texture_pressed = ExtResource("3_03uf8")
+passby_press = true
+metadata/_edit_lock_ = true
+
+[node name="Button11" type="TouchScreenButton" parent="."]
+position = Vector2(440, 440)
+texture_normal = ExtResource("2_i8mhe")
+texture_pressed = ExtResource("3_03uf8")
+passby_press = true
+metadata/_edit_lock_ = true
+
+[node name="Button12" type="TouchScreenButton" parent="."]
+position = Vector2(660, 440)
+texture_normal = ExtResource("2_i8mhe")
+texture_pressed = ExtResource("3_03uf8")
+passby_press = true
+metadata/_edit_lock_ = true
+
+[node name="Button13" type="TouchScreenButton" parent="."]
+position = Vector2(0, 660)
+texture_normal = ExtResource("2_i8mhe")
+texture_pressed = ExtResource("3_03uf8")
+passby_press = true
+metadata/_edit_lock_ = true
+
+[node name="Button14" type="TouchScreenButton" parent="."]
+position = Vector2(220, 660)
+texture_normal = ExtResource("2_i8mhe")
+texture_pressed = ExtResource("3_03uf8")
+passby_press = true
+metadata/_edit_lock_ = true
+
+[node name="Button15" type="TouchScreenButton" parent="."]
+position = Vector2(440, 660)
+texture_normal = ExtResource("2_i8mhe")
+texture_pressed = ExtResource("3_03uf8")
+passby_press = true
+metadata/_edit_lock_ = true
+
+[node name="Button16" type="TouchScreenButton" parent="."]
+position = Vector2(660, 660)
+texture_normal = ExtResource("2_i8mhe")
+texture_pressed = ExtResource("3_03uf8")
+passby_press = true
+metadata/_edit_lock_ = true
+
+[node name="ButtonMenu" type="TouchScreenButton" parent="."]
+position = Vector2(660, 880)
+texture_normal = ExtResource("4_6eb1y")
+texture_pressed = ExtResource("5_s48rp")
+metadata/_edit_lock_ = true
+
+[node name="ButtonQuit" type="TouchScreenButton" parent="."]
+position = Vector2(0, 880)
+texture_normal = ExtResource("6_p5wjx")
+texture_pressed = ExtResource("7_qbyy8")
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="Button01" to="." method="_on_button_01_pressed"]
+[connection signal="released" from="Button01" to="." method="_on_button_01_released"]
+[connection signal="pressed" from="Button02" to="." method="_on_button_02_pressed"]
+[connection signal="released" from="Button02" to="." method="_on_button_02_released"]
+[connection signal="pressed" from="Button03" to="." method="_on_button_03_pressed"]
+[connection signal="released" from="Button03" to="." method="_on_button_03_released"]
+[connection signal="pressed" from="Button04" to="." method="_on_button_04_pressed"]
+[connection signal="released" from="Button04" to="." method="_on_button_04_released"]
+[connection signal="pressed" from="Button05" to="." method="_on_button_05_pressed"]
+[connection signal="released" from="Button05" to="." method="_on_button_05_released"]
+[connection signal="pressed" from="Button06" to="." method="_on_button_06_pressed"]
+[connection signal="released" from="Button06" to="." method="_on_button_06_released"]
+[connection signal="pressed" from="Button07" to="." method="_on_button_07_pressed"]
+[connection signal="released" from="Button07" to="." method="_on_button_07_released"]
+[connection signal="pressed" from="Button08" to="." method="_on_button_08_pressed"]
+[connection signal="released" from="Button08" to="." method="_on_button_08_released"]
+[connection signal="pressed" from="Button09" to="." method="_on_button_09_pressed"]
+[connection signal="released" from="Button09" to="." method="_on_button_09_released"]
+[connection signal="pressed" from="Button10" to="." method="_on_button_10_pressed"]
+[connection signal="released" from="Button10" to="." method="_on_button_10_released"]
+[connection signal="pressed" from="Button11" to="." method="_on_button_11_pressed"]
+[connection signal="released" from="Button11" to="." method="_on_button_11_released"]
+[connection signal="pressed" from="Button12" to="." method="_on_button_12_pressed"]
+[connection signal="released" from="Button12" to="." method="_on_button_12_released"]
+[connection signal="pressed" from="Button13" to="." method="_on_button_13_pressed"]
+[connection signal="released" from="Button13" to="." method="_on_button_13_released"]
+[connection signal="pressed" from="Button14" to="." method="_on_button_14_pressed"]
+[connection signal="released" from="Button14" to="." method="_on_button_14_released"]
+[connection signal="pressed" from="Button15" to="." method="_on_button_15_pressed"]
+[connection signal="released" from="Button15" to="." method="_on_button_15_released"]
+[connection signal="pressed" from="Button16" to="." method="_on_button_16_pressed"]
+[connection signal="released" from="Button16" to="." method="_on_button_16_released"]
+[connection signal="pressed" from="ButtonMenu" to="." method="_on_button_menu_pressed"]
+[connection signal="released" from="ButtonMenu" to="." method="_on_button_menu_released"]
+[connection signal="pressed" from="ButtonQuit" to="." method="_on_button_quit_pressed"]
+[connection signal="released" from="ButtonQuit" to="." method="_on_button_quit_released"]

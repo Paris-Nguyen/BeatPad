@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bybivve67x2yh"]
+
+[ext_resource type="Texture2D" uid="uid://dudrjlqgcj2jr" path="res://button_textures/slider_bar01.svg" id="1_dykse"]
+[ext_resource type="Script" path="res://scripts/touch_slider.gd" id="1_mp3xl"]
+[ext_resource type="Texture2D" uid="uid://cqbearls2cs5f" path="res://button_textures/slider_knob01.svg" id="2_6v76y"]
+
+[node name="TouchSlider" type="TouchScreenButton"]
+texture_normal = ExtResource("1_dykse")
+script = ExtResource("1_mp3xl")
+
+[node name="SliderKnob" type="TextureRect" parent="."]
+offset_top = -15.0
+offset_right = 85.0
+offset_bottom = 67.0
+mouse_filter = 2
+texture = ExtResource("2_6v76y")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="released" from="." to="." method="_on_released"]

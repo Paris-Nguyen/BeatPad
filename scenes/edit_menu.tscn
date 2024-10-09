@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3 uid="uid://b82lca8pix2ta"]
+
+[ext_resource type="Script" path="res://scripts/edit_menu.gd" id="1_ktfl1"]
+[ext_resource type="PackedScene" uid="uid://bybivve67x2yh" path="res://scenes/touch_slider.tscn" id="2_mypmb"]
+[ext_resource type="Texture2D" uid="uid://dt6mvsr8ix4tm" path="res://button_textures/Button004.svg" id="3_45xxx"]
+[ext_resource type="Texture2D" uid="uid://bwvm52x3yhfng" path="res://button_textures/Button004 Pressed.svg" id="4_rm1c4"]
+[ext_resource type="Texture2D" uid="uid://cycbqrm57cfse" path="res://button_textures/Button005.svg" id="5_27fcy"]
+[ext_resource type="Texture2D" uid="uid://b6ot5to6nnksu" path="res://button_textures/Button005 Pressed.svg" id="6_yjdka"]
+[ext_resource type="Texture2D" uid="uid://bi3ov0ss3xcdc" path="res://button_textures/Button001.svg" id="7_mkmwp"]
+[ext_resource type="Texture2D" uid="uid://bhgkhustlkjlq" path="res://button_textures/Button001_Pressed.svg" id="8_8uorq"]
+
+[node name="EditMenu" type="Node2D"]
+script = ExtResource("1_ktfl1")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 900.0
+offset_bottom = 503.0
+mouse_filter = 2
+
+[node name="TouchSlider" parent="." instance=ExtResource("2_mypmb")]
+position = Vector2(211, 47)
+
+[node name="ButtonCropPlus" type="TouchScreenButton" parent="."]
+position = Vector2(550, 150)
+texture_normal = ExtResource("3_45xxx")
+texture_pressed = ExtResource("4_rm1c4")
+
+[node name="ButtonCropMinus" type="TouchScreenButton" parent="."]
+position = Vector2(110, 150)
+texture_normal = ExtResource("5_27fcy")
+texture_pressed = ExtResource("6_yjdka")
+
+[node name="ButtonCropPlay" type="TouchScreenButton" parent="."]
+position = Vector2(330, 150)
+texture_normal = ExtResource("7_mkmwp")
+texture_pressed = ExtResource("8_8uorq")
+
+[connection signal="pressed" from="ButtonCropPlus" to="." method="_on_button_crop_plus_pressed"]
+[connection signal="released" from="ButtonCropPlus" to="." method="_on_button_crop_plus_released"]
+[connection signal="pressed" from="ButtonCropMinus" to="." method="_on_button_crop_minus_pressed"]
+[connection signal="released" from="ButtonCropMinus" to="." method="_on_button_crop_minus_released"]
+[connection signal="pressed" from="ButtonCropPlay" to="." method="_on_button_crop_play_pressed"]
+[connection signal="released" from="ButtonCropPlay" to="." method="_on_button_crop_play_released"]
